@@ -1,31 +1,39 @@
 ## Build Server
 
--[x] express server build
+- [x] express server build
 
--[x] connected with babel
+- [x] connected with babel
 
--[ ] nodemond
+- [ ] nodemond
 
 ## Front-end
 
+- [ ] gulp setup
+
 ## Back-end
 
--[ ] home
+- [x] mongoDB setup
 
--[ ] join
+- [ ] All views set to router and controller
 
--[ ] login
+- [ ] home
 
--[ ] userProfile
+- [ ] join
 
--[ ] editUser Profile
+- [ ] login
 
--[ ] video Detail
+- [ ] userProfile
 
--[ ] video Edit
+- [ ] editUser Profile
 
--[ ] video Delete
+- [ ] change password
 
--[ ] comment
+- [ ] video Detail
 
--[ ] views
+- [ ] video Edit
+
+- [ ] video Delete
+
+- [ ] comment
+
+- [ ] views
