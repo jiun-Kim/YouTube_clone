@@ -1,0 +1,13 @@
+extends layouts/index
+block content
+
+    .form__container
+        h1.form-join__title Create your Google Account
+        h4.form-join__paragraph to continue to YouTube
+        form.form-join__input(action="/join" method="POST")
+            input(type="text" name="firstName" placeholder="First name")
+            input(type="text" name="lastName" placeholder="Last name")
+            input(type="email" name="email" placeholder="Your email address")
+            input(type="password" name="password" placeholder="Password")
+            input(type="password" name="password2" placeholder="Confirm")
+            input(type="submit" value="JOIN")

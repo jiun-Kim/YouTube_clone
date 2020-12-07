@@ -1,0 +1,8 @@
+extends layouts/index
+block content
+
+    .form__container
+        form.form-login(action=routes.login method="POST")
+            input(type="email" name="email" placeholder="Your email address")
+            input(type="password" name="password" placeholder="Password")
+            input(type="submit" value="LogIn")

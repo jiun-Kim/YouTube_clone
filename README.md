@@ -4,11 +4,13 @@
 
 - [x] connected with babel
 
-- [ ] nodemond
+- [x] nodemond
 
 ## Front-end
 
-- [ ] gulp setup
+- [x] gulp setup
+
+- [x] CSS
 
 ## Back-end
 
@@ -16,11 +18,11 @@
 
 - [ ] All views set to router and controller
 
-- [ ] home
+- [x] home
 
-- [ ] join
+- [x] join
 
-- [ ] login
+- [x] login
 
 - [ ] userProfile
 
@@ -28,7 +30,7 @@
 
 - [ ] change password
 
-- [ ] video Detail
+- [x] video Detail
 
 - [ ] video Edit
 

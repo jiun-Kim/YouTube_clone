@@ -12,7 +12,7 @@ sass.compiler = require("node-sass");
 const routes = {
   pug: {
     watch: "src/views/**/*.pug",
-    src: "src/views/*.pug",
+    src: "src/views/layouts/*.pug",
     dest: "src/static/",
   },
   scss: {
