@@ -4,3 +4,6 @@ block content
     video(src=`/${video.fileUrl}` controls=true)
     h3=video.title
     h5=video.description
+
+    a(href=routes.videoEdit(video.id))
+        span EDIT

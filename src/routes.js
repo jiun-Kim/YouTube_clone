@@ -16,8 +16,8 @@ const CHANGE_PASSWORD = "/user/:id/changePassword";
 const VIDEO = "/video";
 const UPLOAD = "/upload";
 const VIDEO_DETAIL = "/:id/detail";
-const EDIT_VIDEO_DETAIL = "/video/:id/edit";
-const VIDEO_DELETE = "/video/:id/delete";
+const VIDEO_EDIT = "/:id/edit";
+const VIDEO_DELETE = "/:id/delete";
 
 const routes = {
   home: HOME,
@@ -38,8 +38,20 @@ const routes = {
       return VIDEO_DETAIL;
     }
   },
-  editVideoDetail: EDIT_VIDEO_DETAIL,
-  videoDelete: VIDEO_DELETE,
+  videoEdit: (id) => {
+    if (id) {
+      return `/video/${id}/edit`;
+    } else {
+      return VIDEO_EDIT;
+    }
+  },
+  videoDelete: (id) => {
+    if (id) {
+      return `/video/${id}/delete`;
+    } else {
+      return VIDEO_DELETE;
+    }
+  },
 };
 
 export default routes;
