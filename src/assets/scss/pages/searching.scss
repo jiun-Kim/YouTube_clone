@@ -1,0 +1,20 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  .not-found__column {
+    margin-bottom: 15px;
+  }
+  i {
+    font-size: 300px;
+    color: $red;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    color: $darkGrey;
+  }
+}

@@ -10,6 +10,21 @@ export const home = async (req, res) => {
   }
 };
 
+export const search = async (req, res) => {
+  const {
+    query: { search: searchingBy },
+  } = req;
+  let videos = [];
+  try {
+    videos = await Video.find({
+      title: { $regex: searchingBy, $options: "i" },
+    });
+    res.render("search", { videos, searchingBy });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const getUpload = (req, res) => {
   res.render("upload");
   console.log(req.user);

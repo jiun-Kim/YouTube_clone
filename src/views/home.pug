@@ -1,14 +1,68 @@
 extends layouts/index
 include ./mixins/videoBlock
 block content
-    
-    include partials/sideNav
-
-    each item in videos
-        +videoBlock({
-            id:item.id,
-            videoFile:item.fileUrl,
-            title:item.title,
-            description:item.description,
-            views:item.views
-        })
+    .home-videos
+        each item in videos
+            +videoBlock({
+                id:item.id,
+                videoFile:item.fileUrl,
+                title:item.title,
+                description:item.description,
+                views:item.views
+            })
+        each item in videos
+            +videoBlock({
+                id:item.id,
+                videoFile:item.fileUrl,
+                title:item.title,
+                description:item.description,
+                views:item.views
+            })
+        each item in videos
+            +videoBlock({
+                id:item.id,
+                videoFile:item.fileUrl,
+                title:item.title,
+                description:item.description,
+                views:item.views
+            })
+        each item in videos
+            +videoBlock({
+                id:item.id,
+                videoFile:item.fileUrl,
+                title:item.title,
+                description:item.description,
+                views:item.views
+            })
+        each item in videos
+            +videoBlock({
+                id:item.id,
+                videoFile:item.fileUrl,
+                title:item.title,
+                description:item.description,
+                views:item.views
+            })
+        each item in videos
+            +videoBlock({
+                id:item.id,
+                videoFile:item.fileUrl,
+                title:item.title,
+                description:item.description,
+                views:item.views
+            })
+        each item in videos
+            +videoBlock({
+                id:item.id,
+                videoFile:item.fileUrl,
+                title:item.title,
+                description:item.description,
+                views:item.views
+            })
+        each item in videos
+            +videoBlock({
+                id:item.id,
+                videoFile:item.fileUrl,
+                title:item.title,
+                description:item.description,
+                views:item.views
+            })

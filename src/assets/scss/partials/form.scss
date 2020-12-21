@@ -1,0 +1,131 @@
+.form__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100vh;
+
+  .form-upload,
+  .form-join,
+  .form-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 60%;
+    height: 80%;
+    border: $border;
+    margin-bottom: 90px;
+    background-color: white;
+
+    border-radius: 10px;
+    padding: 50px;
+    h1 {
+      font-size: 50px;
+    }
+  }
+  .form-upload {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 700px;
+    border: $border;
+    margin-bottom: 90px;
+
+    border-radius: 10px;
+    padding: 50px;
+    .form-upload__file,
+    .form-upload__text {
+      width: 100%;
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      i {
+        font-size: 45px;
+        color: #949494;
+      }
+    }
+  }
+}
+
+.label {
+  font-size: 20px;
+  color: white;
+}
+.file {
+  display: none;
+}
+.icon-file-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  background-color: #ebebeb;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.label-file-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 40px;
+  background-color: $blue;
+  border-radius: 3px;
+}
+
+.title {
+  width: 60%;
+  height: 80px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  border: $border;
+}
+.description {
+  width: 60%;
+  height: 200px;
+  border-radius: 5px;
+  border: $border;
+}
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  border-radius: 3px;
+  background-color: $blue;
+  color: white;
+  border: none;
+}
+.form-join,
+.form-login {
+  input {
+    width: 60%;
+    height: 10%;
+    border-radius: 5px;
+    border: $border;
+  }
+}
+.kakao {
+  width: 250px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #ffe80e;
+  color: #633c23;
+  border: none;
+}
+.google {
+  width: 250px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #d54830;
+  color: white;
+  border: none;
+}

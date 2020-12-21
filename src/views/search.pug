@@ -1,0 +1,22 @@
+extends layouts/index
+include ./mixins/videoBlock
+block content
+
+    if videos = []
+        .not-found
+            .not-found__column
+                i.fas.fa-exclamation-triangle
+            .not-found__column
+                h1 No results found
+            .not-found__column
+                h2 Try different keywords or remove search filters
+    else
+        .home-videos
+            each item in videos
+                +videoBlock({
+                    id:item.id,
+                    videoFile:item.fileUrl,
+                    title:item.title,
+                    description:item.description,
+                    views:item.views
+                })

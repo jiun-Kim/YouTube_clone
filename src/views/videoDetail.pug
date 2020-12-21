@@ -1,9 +1,14 @@
 extends layouts/index
+include mixins/videoPlayer
 block content
+    .videoPlayer__container
+        +videoPlayer({
+            videoFile:video.fileUrl
+        })
+        
+        .video-detail__text
+            h3=video.title
+            h5=video.description
 
-    video(src=`/${video.fileUrl}` controls=true)
-    h3=video.title
-    h5=video.description
-
-    a(href=routes.videoEdit(video.id))
-        span EDIT
+        a(href=routes.videoEdit(video.id))
+            span EDIT

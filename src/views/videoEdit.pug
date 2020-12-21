@@ -1,16 +1,26 @@
 extends layouts/index
 block content
 
-    .video
-        video(src=`/${video.fileUrl}` controls=true)
-    .form__container
-        form.form-upload(action=routes.videoEdit(video.id) method="POST")
-            input(type="text" name="title" placeholder="Title" value=video.title)
-            input(type="text" name="description" placeholder="Description" value=video.description)
-            i.fas.fa-file-upload 
-            label(for="thumbnail")  Thumbnail File
-            input(type="file" id="thumbnail" name="thumbnail" placeholder="Thumbnail")
-            input(type="submit" value="UpDate")
-    .video_delete
-        a(href=routes.videoDelete(video.id))
-            span Delete video
+    .video-edit__container
+        .video-edit__div
+            h1 Edit your video
+            .video-edit__video
+                video(src=`/${video.fileUrl}` controls=true)
+        .form__container
+            form.form-upload(action=routes.videoEdit(video.id) method="POST")
+                .form-upload__file
+                    .icon-file-upload
+                        i.fas.fa-file-upload
+                    .label-file-upload
+                        label.label(for="videoFile") Select File
+                        input.file(type="file" id="videoFile" name="videoFile" required)
+                .form-upload__text
+                    input.title(type="text" name="title" placeholder="Title" value=video.title required)
+                    textarea.description(name="description" placeholder="Description" required)=video.description
+                
+                .edit-button
+                    input.submit(type="submit" value="UpDate")
+                    .video_delete
+                        a(href=routes.videoDelete(video.id))
+                            span Delete video
+    

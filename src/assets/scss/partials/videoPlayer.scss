@@ -1,0 +1,91 @@
+.videoPlayer {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  background-color: black;
+  video {
+    width: 100%;
+    height: 93%;
+  }
+  &:hover {
+    .video-player__controler {
+      opacity: 1;
+    }
+  }
+  .video-player__controler {
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    width: 100%;
+    height: 7%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0 10px 0 10px;
+    .video-player__bar {
+      width: 100%;
+      align-self: end;
+      .playerBottle {
+        width: 100%;
+        height: 3px;
+        background-color: grey;
+        .playerJuice {
+          width: 100%;
+          height: 3px;
+          background-color: $red;
+        }
+      }
+    }
+    .video-player__column {
+      width: 100%;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      i {
+        font-size: 20px;
+      }
+      .firstPlayer {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      i {
+        margin-right: 25px;
+      }
+      .playTime {
+        display: flex;
+        align-items: center;
+        span {
+          display: block;
+          margin-right: 5px;
+          font-size: 13px;
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+  }
+}
+.volumeRange-container {
+  width: 100px;
+  .volumeRange {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 75px;
+    height: 25px;
+    .volumeRange__background {
+      position: relative;
+      width: 100%;
+      height: 5px;
+      background-color: grey;
+      .volumeRange__bar {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+      }
+    }
+  }
+}

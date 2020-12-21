@@ -1,35 +1,38 @@
 header.header
-    .header__logo
+    .header__logo 
         a(href="/")
             i.fab.fa-youtube
             span YouTube
     .header__search
-        form.search(method="GET")
-            input(type="input" name="search")
+        form.search(action=routes.search method="GET")
+            input(type="input" name="search" placeholder="Search")
             button(type="submit")
                 i.fas.fa-search
-    .header__upload
-        a(href=`/video${routes.upload}`)
-            button(type="button")
-                i.fas.fa-caret-square-up
-                span Upload Video
-    .header__user-join
-        if !loggedUser
-            a(href=routes.join)
+    .header__user
+        .header__upload
+            a(href=`/video${routes.upload}`)
                 button(type="button")
-                    i.fas.fa-user
-                    span Sign In
-            a(href=routes.login)
-                button(type="button")
-                    i.fas.fa-user
-                    span Log In
-                //- img(src="")
-                //- The img from here will be change avatar img user upload img for avatar 
-                    it will be share
-                    여기에 나오는 이미지는 나중에 유저가 변경하는 아바타와 공유가 되야 합니다.
-        else
-            .header__user-login
-                a(href=routes.logout)
+                    i.fas.fa-caret-square-up
+                    span Upload Video
+        .header__user-join
+            if !loggedUser
+                a(href=routes.join)
                     button(type="button")
                         i.fas.fa-user
-                        span Log out
+                        span Sign In
+                a(href=routes.login)
+                    button(type="button")
+                        i.fas.fa-user
+                        span Log In
+                    //- img(src="")
+                    //- The img from here will be change avatar img user upload img for avatar 
+                        it will be share
+                        여기에 나오는 이미지는 나중에 유저가 변경하는 아바타와 공유가 되야 합니다.
+            else
+                .header__user-login
+                    a(href=routes.logout)
+                        button(type="button")
+                            i.fas.fa-user
+                            span Log out
+    
+    

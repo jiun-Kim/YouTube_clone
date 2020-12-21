@@ -12,25 +12,28 @@ sass.compiler = require("node-sass");
 const routes = {
   pug: {
     watch: "src/views/**/*.pug",
-    src: "src/views/layouts/*.pug",
-    dest: "src/static/",
+    src: "src/views/layouts/index.pug",
+    dest: "src/static",
   },
   scss: {
-    watch: "src/views/scss/**/*.scss",
-    src: "src/views/scss/style.scss",
-    dest: "src/static/css",
+    watch: "src/assets/scss/**/*.scss",
+    src: "src/assets/scss/style.scss",
+    dest: "src/static",
   },
   js: {
-    watch: "src/views/js/**/*.js",
-    src: "src/views/js/main.js",
-    dest: "src/static/js",
+    watch: "src/assets/js/**/*.js",
+    src: "src/assets/js/main.js",
+    dest: "src/static",
   },
 };
 
-const clean = () => del(["src/static"]);
-
 const pug = () =>
-  gulp.src(routes.pug.src).pipe(gpug()).pipe(gulp.dest(routes.pug.dest));
+  gulp
+    .src(routes.pug.src)
+    .pipe(gpug({ client: true }))
+    .pipe(gulp.dest(routes.pug.dest));
+
+const clean = () => del(["src/static"]);
 
 const styles = () =>
   gulp
@@ -67,4 +70,5 @@ const prepare = gulp.series([clean]);
 const assets = gulp.series([pug, styles, js]);
 const live = gulp.series(watch);
 
-export const dev = gulp.series([prepare, assets, live]);
+export const build = gulp.series([prepare, assets]);
+export const dev = gulp.series([build, live]);
