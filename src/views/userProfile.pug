@@ -1,0 +1,24 @@
+extends layouts/index
+include mixins/videoBlock
+block content
+
+    .user-profile__container
+        .user-profile__avatar
+            img(src=`/${user.avatarUrl}`)
+        .user-profile__name
+            h1 Welcome 
+            h2=user.firstName
+            a(href=routes.userEdit(user.id))
+                button.user-profile__edit
+                    span Edit
+        .user-video__container
+            h1 My Videos
+            .user-video__list
+                each item in videos
+                    +videoBlock({
+                        id:item.id,
+                        videoFile:item.fileUrl,
+                        title:item.title,
+                        description:item.description,
+                        views:item.views
+                    })

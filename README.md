@@ -16,7 +16,7 @@
 
 - [x] mongoDB setup
 
-- [ ] All views set to router and controller
+- [x] All views set to router and controller
 
 - [x] home
 
@@ -24,17 +24,17 @@
 
 - [x] login
 
-- [ ] userProfile
+- [x] userProfile
 
-- [ ] editUser Profile
+- [x] editUser Profile
 
-- [ ] change password
+- [x] change password
 
 - [x] video Detail
 
-- [ ] video Edit
+- [x] video Edit
 
-- [ ] video Delete
+- [x] video Delete
 
 - [ ] comment
 

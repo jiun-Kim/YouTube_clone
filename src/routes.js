@@ -8,9 +8,10 @@ const SEARCH = "/search";
 
 // User Routers
 
-const USER_PROFILE = "/user/profile";
-const EDIT_PROFILE = "/user/:id/edit";
-const CHANGE_PASSWORD = "/user/:id/changePassword";
+const USER = "/user";
+const USER_PROFILE = "/profile";
+const USER_EDIT = "/:id/edit";
+const CHANGE_PASSWORD = "/changePassword";
 
 // Video Routers
 
@@ -27,8 +28,15 @@ const routes = {
   logout: LOGOUT,
   search: SEARCH,
 
+  user: USER,
   userProfile: USER_PROFILE,
-  editProfile: EDIT_PROFILE,
+  userEdit: (id) => {
+    if (id) {
+      return `/user/${id}/edit`;
+    } else {
+      return USER_EDIT;
+    }
+  },
   changePassword: CHANGE_PASSWORD,
 
   video: VIDEO,

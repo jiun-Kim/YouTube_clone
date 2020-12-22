@@ -2,7 +2,7 @@ mixin videoBlock(video={})
     .videoBlock
         a(href=routes.videoDetail(video.id))
             .video-player
-                video(src=video.videoFile)
+                video(src=`/${video.videoFile}`)
             .video-text
                 h3=video.title
                 h5=video.description

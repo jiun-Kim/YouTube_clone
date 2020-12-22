@@ -1,0 +1,14 @@
+extends layouts/index
+block content
+
+    .form__container
+        form.form-join(action=routes.userEdit(loggedUser.id) method="POST" enctype="multipart/form-data")
+            label(for="avatar")
+            input(type="file" name="avatar")
+            input(type="text" name="firstName" placeholder="First name" value=loggedUser.firstName required)
+            input(type="text" name="lastName" placeholder="Last name" value=loggedUser.lastName required)
+            input(type="email" name="email" placeholder="Your email address" value=loggedUser.email required)
+            input.submit(type="submit" value="Update")
+            
+            a(href=`/user${routes.changePassword}`)
+                span Change Password

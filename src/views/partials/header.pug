@@ -30,9 +30,14 @@ header.header
                         여기에 나오는 이미지는 나중에 유저가 변경하는 아바타와 공유가 되야 합니다.
             else
                 .header__user-login
+                    a(href=`/user${routes.userProfile}`)
+                        button(type="button")
+                            i.fas.fa-user
+                            span Profile
+                .header__user-login
                     a(href=routes.logout)
                         button(type="button")
                             i.fas.fa-user
-                            span Log out
+                            span Logout
     
     
