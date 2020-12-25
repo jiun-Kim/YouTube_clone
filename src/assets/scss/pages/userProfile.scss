@@ -60,6 +60,19 @@
     video {
       width: 100%;
     }
+    .video-subscript__avatar {
+      margin-top: 20px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: grey;
+      margin-right: 5px;
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+    }
   }
 }
 .video-text {

@@ -66,7 +66,7 @@ export const postUserEdit = async (req, res) => {
         firstName,
         lastName,
         email,
-        avatarUrl: file ? file.path : req.user.avatarUrl,
+        avatarUrl: file ? file.location : req.user.avatarUrl,
       }
     );
     res.redirect(`/user${routes.userProfile}`);

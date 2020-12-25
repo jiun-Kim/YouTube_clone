@@ -20,7 +20,7 @@ const VideoSchema = new mongoose.Schema({
 
   uploadAt: {
     type: Date,
-    default: Date.new,
+    default: Date.now,
   },
 
   creator: {

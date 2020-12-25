@@ -2,8 +2,13 @@ mixin videoBlock(video={})
     .videoBlock
         a(href=routes.videoDetail(video.id))
             .video-player
-                video(src=`/${video.videoFile}`)
-            .video-text
-                h3=video.title
-                h5=video.description
-                span=video.views
+                video(src=video.videoFile)
+            .video-subscript
+                .video-subscript__avatar
+                    img(src=loggedUser.avatarUrl)
+                .video-subscript__title
+                    h3=video.title
+                    span=loggedUser.lastName
+                    .views
+                        span=video.views
+                        span views

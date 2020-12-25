@@ -15,18 +15,41 @@
       height: 100%;
       margin-bottom: 10px;
     }
-    .video-text {
-      color: black;
-      h3 {
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 8px;
+
+    .video-subscript {
+      margin-left: 5px;
+      display: flex;
+      .video-subscript__avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: grey;
+        margin-right: 5px;
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
       }
-      h5,
-      span {
-        font-size: 15px;
-        color: $mistyGrey;
-        margin-bottom: 5px;
+      .video-subscript__title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: black;
+        .views {
+          display: flex;
+          justify-content: flex-start;
+        }
+        h3 {
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 8px;
+        }
+        span {
+          font-size: 15px;
+          color: $mistyGrey;
+          margin-bottom: 5px;
+        }
       }
     }
   }

@@ -33,6 +33,10 @@
     justify-content: flex-end;
     width: 50%;
     margin-right: 5%;
+    input,
+    textarea {
+      font-size: 20px;
+    }
     .description {
       height: 180px;
     }

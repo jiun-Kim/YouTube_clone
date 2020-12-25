@@ -27,6 +27,10 @@ function handleVideoPlay() {
 }
 
 function videoFinished() {
+  const videoId = window.location.href.split("video")[1].split("detail")[0];
+  fetch(`/api${videoId}view`, {
+    method: "POST",
+  });
   if (video.paused === true) {
     playBtn.innerHTML = '<i class="fas fa-sync-alt"></i>';
     playBtn.addEventListener("click", () => {
@@ -134,7 +138,6 @@ function goFullScreen() {
 
 function init() {
   document.addEventListener("keydown", (e) => {
-    e.preventDefault();
     if (e.code === "Space") {
       if (video.paused === true) {
         video.play();
@@ -146,7 +149,6 @@ function init() {
     }
   });
   document.addEventListener("keydown", (e) => {
-    e.preventDefault();
     if (e.code === "ArrowUp") {
       if (video) {
         video.volume += 0.1;
@@ -158,7 +160,6 @@ function init() {
     }
   });
   document.addEventListener("keydown", (e) => {
-    e.preventDefault();
     if (e.code === "ArrowDown") {
       if (video) {
         video.volume -= 0.1;

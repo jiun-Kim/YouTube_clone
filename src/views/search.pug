@@ -2,7 +2,7 @@ extends layouts/index
 include ./mixins/videoBlock
 block content
 
-    if videos = []
+    if videos.length === 0
         .not-found
             .not-found__column
                 i.fas.fa-exclamation-triangle

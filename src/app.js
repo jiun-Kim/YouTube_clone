@@ -18,12 +18,13 @@ import { localsMiddleware } from "./middleware";
 import routes from "./routes";
 
 import "./passport";
+import apiRouter from "./routers/apiRouter";
 
 const app = express();
 
 const CookieStore = MongoStore(session);
 
-app.use(helmet());
+app.use(helmet({ contentSecurityPolicy: false }));
 app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(bodyParser.json());
@@ -38,9 +39,6 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
-
-app.use("/data/videos", express.static("data/videos"));
-app.use("/data/avatar", express.static("data/avatar"));
 app.use("/static", express.static("src/static"));
 
 app.set("view engine", "pug");
@@ -51,5 +49,7 @@ app.use(localsMiddleware);
 app.use(routes.home, globalRouter);
 app.use(routes.video, videoRouter);
 app.use(routes.user, userRouter);
+
+app.use(routes.api, apiRouter);
 
 export default app;

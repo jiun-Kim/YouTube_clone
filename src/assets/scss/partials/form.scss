@@ -4,6 +4,11 @@
   align-items: center;
   width: 80%;
   height: 100vh;
+  input,
+  textarea {
+    font-size: 20px;
+    padding: 15px;
+  }
 
   .form-upload,
   .form-join,
